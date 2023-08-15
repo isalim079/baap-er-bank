@@ -2,6 +2,7 @@
 document.getElementById('btn-deposit').addEventListener('click', function () {
     const userDeposit = document.getElementById('user-deposit');
     const newUserDeposit = userDeposit.value;
+    userDeposit.value = '';
     if(isNaN(parseFloat(newUserDeposit))){
         alert("Please provide a valid number");
         return;
@@ -14,7 +15,7 @@ document.getElementById('btn-deposit').addEventListener('click', function () {
     const finalBalance = parseFloat(newUserDeposit) + parseFloat(balanceTotal.innerText);
     balanceTotal.innerText = finalBalance;
 
-    userDeposit.value = '';
+    
 
 })
 
@@ -24,6 +25,7 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
     const userWithdraw = document.getElementById('user-withdraw');
     const withdrawAmount = document.getElementById('withdraw-amount');
     const userWithdrawValue = userWithdraw.value;
+    userWithdraw.value ='';
     if(isNaN(parseFloat(userWithdrawValue))){
         alert("Please provide a valid number");
         return;
@@ -42,5 +44,5 @@ document.getElementById('btn-withdraw').addEventListener('click', function () {
         balanceTotal.innerText = finalBalance;
     }
 
-    userWithdraw.value ='';
+    
 })
